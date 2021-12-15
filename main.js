@@ -51,7 +51,7 @@ client.on('message', message => {
         ' `warzone` to ping the war apes\n' + 
         ' `spam <username> <message>` to send dm to user\n' + 
         ' `annoy <username>` to ping user 10 times\n' + 
-        ' `daddy` spams bussy ~~might~~ will delete later\n' +
+        ' `[REDACTED]' +
         ' `quote` to return a random quote\n' + 
         ' `thanos` to return a random thanos quote\n' +
         ' `mock` to mock the previous sentence\n' +
@@ -78,9 +78,9 @@ client.on('message', message => {
         const temp = client.users.cache.find(User => User.username === args[2]);
         if (!temp | temp.bot) return;
         myLoop(message, temp.id);
-    } else if (args[1].toLowerCase() === 'daddy'){
+    } else if (args[1].toLowerCase() === '[REDACTED]'){
         i = 0;
-        wordLoop(message, 'bussy');
+        wordLoop(message, '[REDACTED]');
     } else if (args[1].toLowerCase() === 'quote') {
         var index = Math.floor(Math.random() * quotes.length);
         message.channel.send(quotes[index]);
@@ -146,4 +146,4 @@ client.on('message', message => {
     } 
 });
 
-client.login('OTA4NTk5MzgxNzQ0MzAwMDUy.YY4FHQ.NrDZTkwyIr-9IKjEhYOvWtXsDfY');
+client.login('[lol nope]');
