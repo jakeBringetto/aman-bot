@@ -6,6 +6,11 @@ const aman_advice = require('./advice.js');
 const { Client, Intents, DiscordAPIError } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MEMBERS, Intents.FLAGS.GUILD_PRESENCES] });
 
+require('dotenv').config();
+const bot_key = process.env.BOT_KEY;
+const hidden_command = process.env.HIIDDEN_COMMAND_1;
+const hidden_word = process.env.HIIDDEN_WORD_1;
+
 const prefix = 'aman';
 client.once('ready', () => {
     console.log('amanbot has the golden arm!');
@@ -51,7 +56,7 @@ client.on('message', message => {
         ' `warzone` to ping the war apes\n' + 
         ' `spam <username> <message>` to send dm to user\n' + 
         ' `annoy <username>` to ping user 10 times\n' + 
-        ' `[REDACTED]' +
+        ' `daddy` spams bussy ~~might~~ will delete later\n' +
         ' `quote` to return a random quote\n' + 
         ' `thanos` to return a random thanos quote\n' +
         ' `mock` to mock the previous sentence\n' +
@@ -78,9 +83,9 @@ client.on('message', message => {
         const temp = client.users.cache.find(User => User.username === args[2]);
         if (!temp | temp.bot) return;
         myLoop(message, temp.id);
-    } else if (args[1].toLowerCase() === '[REDACTED]'){
+    } else if (args[1].toLowerCase() === 'daddy'){
         i = 0;
-        wordLoop(message, '[REDACTED]');
+        wordLoop(message, 'bussy');
     } else if (args[1].toLowerCase() === 'quote') {
         var index = Math.floor(Math.random() * quotes.length);
         message.channel.send(quotes[index]);
@@ -146,4 +151,4 @@ client.on('message', message => {
     } 
 });
 
-client.login('[lol nope]');
+client.login(bot_key);
