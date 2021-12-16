@@ -13,7 +13,7 @@ const hidden_word = process.env.HIIDDEN_WORD_1;
 
 const prefix = 'aman';
 client.once('ready', () => {
-    console.log('amanbot has the golden arm!');
+    console.log('amanbot has the golden arm!!');
     
 });
 
