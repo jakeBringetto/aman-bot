@@ -8,9 +8,8 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 
 require('dotenv').config();
 const bot_key = process.env.BOT_KEY;
-const hidden_command = process.env.HIIDDEN_COMMAND_1;
-const hidden_word = process.env.HIIDDEN_WORD_1;
-
+const hidden_command = process.env.HIDDEN_COMMAND_1;
+const hidden_word = process.env.HIDDEN_WORD_1;
 const prefix = 'aman';
 client.once('ready', () => {
     console.log('amanbot has the golden arm!!');
@@ -56,7 +55,6 @@ client.on('message', message => {
         ' `warzone` to ping the war apes\n' + 
         ' `spam <username> <message>` to send dm to user\n' + 
         ' `annoy <username>` to ping user 10 times\n' + 
-        ' `daddy` spams bussy ~~might~~ will delete later\n' +
         ' `quote` to return a random quote\n' + 
         ' `thanos` to return a random thanos quote\n' +
         ' `mock` to mock the previous sentence\n' +
