@@ -147,7 +147,7 @@ client.on('message', message => {
             }
         ]})
     } else if (args[1].toLowerCase() === 'wiki'){
-        message.channel.send("https://app.gitbook.com/s/-MYbHU43u2iKybrqtJai/");
+        message.channel.send("https://github.com/jakeBringetto/Centralized-Notes-Store");
     } 
 });
 
