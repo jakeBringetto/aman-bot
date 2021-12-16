@@ -83,9 +83,9 @@ client.on('message', message => {
         const temp = client.users.cache.find(User => User.username === args[2]);
         if (!temp | temp.bot) return;
         myLoop(message, temp.id);
-    } else if (args[1].toLowerCase() === 'daddy'){
+    } else if (args[1].toLowerCase() === hidden_command){
         i = 0;
-        wordLoop(message, 'bussy');
+        wordLoop(message, hidden_word);
     } else if (args[1].toLowerCase() === 'quote') {
         var index = Math.floor(Math.random() * quotes.length);
         message.channel.send(quotes[index]);
