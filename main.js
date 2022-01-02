@@ -5,6 +5,8 @@ const black_hole_pics = require('./blackhole.js');
 const aman_advice = require('./advice.js');
 const { Client, Intents, DiscordAPIError } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MEMBERS, Intents.FLAGS.GUILD_PRESENCES] });
+const find = require('./image.js');
+
 
 require('dotenv').config();
 const bot_key = process.env.BOT_KEY;
@@ -63,7 +65,9 @@ client.on('message', message => {
         ' `advice` for some killer advice!!!!!\n' +
         ' `todd` to bring up todd-yu.com\n' +
         ' `avatar` to show user profile picture\n' +
-        ' `wiki` to pull up gitbook wiki';
+        ' `wiki` to pull up gitbook wiki\n' +
+        ' `everyone` to spam everyone 20 times\n' +
+        ' `image <search>` to search for an image';
         message.channel.send(commandString);
     } else if (args[1].toLowerCase() === 'warzone'){
         const milton = client.users.cache.find(User => User.username == 'miltonzhang559').id;
@@ -146,7 +150,12 @@ client.on('message', message => {
         ]})
     } else if (args[1].toLowerCase() === 'wiki'){
         message.channel.send("https://github.com/jakeBringetto/Centralized-Notes-Store");
-    } 
+    } else if (args[1].toLowerCase() === 'image'){
+        const query = args.slice(2).join(" ");
+        find(message, query);
+    } else if (args[1].toLowerCase() === 'everyone'){
+        wordLoop(message, '@everyone');
+    }
 });
 
 client.login(bot_key);

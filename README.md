@@ -17,6 +17,8 @@
 * `todd` to bring up todd-yu.com
 * `avatar`to show user profile picture
 * `wiki` to pull up gitbook wiki
+* `image \<search>` to search for an image
+* `everyone` to spam everyone 20 times
 
 #### Example Use:
 `aman commands`
