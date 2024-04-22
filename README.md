@@ -19,6 +19,7 @@
 * `wiki` to pull up gitbook wiki
 * `image \<search>` to search for an image
 * `everyone` to spam everyone 20 times
+* `translate` to use GPT to translate your sentence to the language of your choice
 
 #### Example Use:
 `aman commands`
